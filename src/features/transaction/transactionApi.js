@@ -26,3 +26,11 @@ export const deleteTransactions = async (id) => {
 
     return response.data;
 }
+
+
+export const selectTransactions = async (data) => {
+    
+    const response = await axios.get(`/transactions?type=${data}`);
+    console.log(response,data)
+    return response.data;
+}
